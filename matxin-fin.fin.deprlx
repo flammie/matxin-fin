@@ -45,4 +45,4 @@ SETPARENT @acl TO (1 N) ;
 SETPARENT @advmod TO (1* V BARRIER V) ;
 
 SETPARENT @nmod TO (1* V BARRIER V) ;
-SETPARENT @neg TO (* ConNeg) ;
+SETPARENT @neg TO (0* ConNeg) ;
