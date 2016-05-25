@@ -21,20 +21,18 @@ LIST @nmod = @nmod ;     # Nominal modifier
 LIST @dobj = @dobj ;     # The direct object of the sentence
 LIST @punct = @punct ;   # Any punctuation
 LIST @dep = @dep ;       # Any remaining dependency
-
-
+LIST @neg = @neg ;
+LIST @punct = @punct ;
 
 SECTION
 
 MAP @advmod TARGET Adv ;
 MAP @neg TARGET Neg ; 
 MAP @case TARGET Post ;
-MAP @acl TARGET Gpr ;
 MAP @dobj TARGET Acc ;
 MAP @punct TARGET Punct ;
 MAP @nmod TARGET Pers IF (1 Post) ;
-MAP @root TARGET Fin IF (NOT -1* Fin) (1 Sent) ; 
-MAP @punct TARGET punct ;
+MAP @root TARGET Fin IF (NOT -1* Fin) (1 Punct) ; 
 MAP (@dep) TARGET (*) ;
 
 SECTION
