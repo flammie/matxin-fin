@@ -11,6 +11,7 @@ LIST Punct = punct ;
 LIST Gen = gen ;
 LIST Neg = neg ;
 LIST Fin = pri pres past ; # Finite verb forms
+LIST ConNeg = conneg ;
 
 LIST @root = @root ;     # The root of the sentence, often a finite verb
 LIST @nsubj = @nsubj ;   # The nominal subject of the sentence
@@ -44,4 +45,4 @@ SETPARENT @acl TO (1 N) ;
 SETPARENT @advmod TO (1* V BARRIER V) ;
 
 SETPARENT @nmod TO (1* V BARRIER V) ;
-
+SETPARENT @neg TO (* ConNeg) ;
